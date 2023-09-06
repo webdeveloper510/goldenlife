@@ -1,3 +1,4 @@
+{% load active_link_tags %}
 <div class="sidebar" id="sidebar">
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
@@ -5,22 +6,22 @@
                 <li class="menu-title"> 
                     <span>Main</span>
                 </li>
-                <li class="active"> 
+                <li class={% active_link 'dashboard' 'active' %}> 
                     <a href="{% url 'dashboard'%}"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+                </li >
+                <li class={% active_link 'appointment' 'active' %}> 
+                    <a href="{% url 'appointment'%}"><i class="fe fe-layout"></i> <span>Appointments</span></a>
                 </li>
-                <li> 
-                    <a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Appointments</span></a>
+                <li class={% active_link 'specialities' 'active' %}> 
+                    <a href="{% url 'specialities'%}"><i class="fe fe-users"></i> <span>Specialities</span></a>
                 </li>
-                <li> 
-                    <a href="specialities.html"><i class="fe fe-users"></i> <span>Specialities</span></a>
+                <li class={% active_link 'doctor' 'active' %}> 
+                    <a href="{% url 'doctor'%}"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
                 </li>
-                <li> 
-                    <a href="doctor-list.html"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
+                <li class={% active_link 'patients' 'active' %}> 
+                    <a href="{% url 'patients'%}"><i class="fe fe-user"></i> <span>Patients</span></a>
                 </li>
-                <li> 
-                    <a href="patient-list.html"><i class="fe fe-user"></i> <span>Patients</span></a>
-                </li>
-                <li> 
+                {% comment %} <li> 
                     <a href="reviews.html"><i class="fe fe-star-o"></i> <span>Reviews</span></a>
                 </li>
                 <li> 
@@ -105,7 +106,7 @@
                             <a href="javascript:void(0);"> <span>Level 1</span></a>
                         </li>
                     </ul>
-                </li>
+                </li> {% endcomment %}
             </ul>
         </div>
     </div>

@@ -15,12 +15,12 @@
         <i class="fe fe-text-align-left"></i>
     </a>
     
-    <div class="top-nav-search">
+    {% comment %} <div class="top-nav-search">
         <form>
             <input type="text" class="form-control" placeholder="Search here">
             <button class="btn" type="submit"><i class="fa fa-search"></i></button>
         </form>
-    </div>
+    </div> {% endcomment %}
     
     <!-- Mobile Menu Toggle -->
     <a class="mobile_btn" id="mobile_btn">
@@ -32,16 +32,16 @@
     <ul class="nav user-menu">
 
         <!-- Notifications -->
-        <li class="nav-item dropdown noti-dropdown">
+        {% comment %} <li class="nav-item dropdown noti-dropdown">
             <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                 <i class="fe fe-bell"></i> <span class="badge rounded-pill">3</span>
-            </a>
+            </a> {% endcomment %}
             <div class="dropdown-menu notifications">
-                <div class="topnav-dropdown-header">
+                {% comment %} <div class="topnav-dropdown-header">
                     <span class="notification-title">Notifications</span>
                     <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
-                </div>
-                <div class="noti-content">
+                </div> {% endcomment %}
+                {% comment %} <div class="noti-content">
                     <ul class="notification-list">
                         <li class="notification-message">
                             <a href="#">
@@ -96,10 +96,10 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-                <div class="topnav-dropdown-footer">
+                </div> {% endcomment %}
+                {% comment %} <div class="topnav-dropdown-footer">
                     <a href="#">View all Notifications</a>
-                </div>
+                </div> {% endcomment %}
             </div>
         </li>
         <!-- /Notifications -->
@@ -120,7 +120,7 @@
                     </div>
                 </div>
                 <a class="dropdown-item" href="{% url "profile" %}">My Profile</a>
-                <a class="dropdown-item" href="settings.html">Settings</a>
+                {% comment %} <a class="dropdown-item" href="settings.html">Settings</a> {% endcomment %}
                 <a class="dropdown-item" href="{% url "logout" %}">Logout</a>
             </div>
         </li>

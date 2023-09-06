@@ -31,6 +31,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ["54.84.161.43"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'active_link',
     'healthapp',
     'adminapp',
 ]
@@ -83,28 +85,28 @@ WSGI_APPLICATION = 'health.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME':config("NAME"),
-#         'USER':config("USERS"),
-#         "HOST":config("HOST"),
-#         'PASSWORD':config("PASSWORD"),
-#         "PORT":config("PORT")
-#     }
-# }
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME':config("NAME"),
         'USER':config("USERS"),
         "HOST":config("HOST"),
-        'PASSWORD':config("LIVEPASSWORD"),
+        'PASSWORD':config("PASSWORD"),
         "PORT":config("PORT")
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME':config("NAME"),
+#         'USER':config("USERS"),
+#         "HOST":config("HOST"),
+#         'PASSWORD':config("LIVEPASSWORD"),
+#         "PORT":config("PORT")
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
