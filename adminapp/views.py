@@ -10,7 +10,7 @@ from django.utils.crypto import get_random_string
 
 
 """Dashboard Page"""
-@login_required
+
 def AdminHome(request):
     return render(request,"admin/adminindex.html")
 
@@ -106,7 +106,7 @@ def ChangePasswordLink(request,email,token):
     return render(request, "admin/changepassword.html")
 
 
-@login_required
+
 def ChangePassword(request):
     if request.method == "POST":
         password = request.POST.get('password')
@@ -119,22 +119,22 @@ def ChangePassword(request):
         return HttpResponse("Your password and confirmation password do not match.")
     return render(request, "change_password.html")
 
-@login_required
+
 def Appointments(request):
     return render(request,"admin/appointment-list.html")
 
 
-@login_required
+
 def Specialities(request):
     return render(request,"admin/specialities.html")
 
 
-@login_required
+
 def Doctor(request):
     return render(request,"admin/doctor-list.html")
 
 
-@login_required
+
 def Patients(request):
     return render(request,"admin/patient-list.html")
     

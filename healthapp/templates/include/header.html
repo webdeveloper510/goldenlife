@@ -23,20 +23,20 @@
                     </a>
                 </div>
                 <ul class="main-nav">
-                    <li class="has-submenu megamenu active">
-                        <a href="javascript:void(0);">Home <i class="fas fa-chevron-down"></i></a>
+                    <li>
+                        <a href="/">Home <i></i></a>
                         <ul class="submenu mega-submenu">
                             <li>
                                 <div class="megamenu-wrapper">
                                     <div class="row">
                                         <div class="col-lg-2">
                                             <div class="single-demo active">
-                                                <div class="demo-img">
+                                                {% comment %} <div class="demo-img">
                                                     <a href="/" class="inner-demo-img"><img src="/static/assets/img/home-11.jpg" class="img-fluid " alt="img"></a>
-                                                </div>
-                                                <div class="demo-info">
+                                                </div> {% endcomment %}
+                                                {% comment %} <div class="demo-info">
                                                     <a href="/" class="inner-demo-img">General Home</a>
-                                                </div>
+                                                </div> {% endcomment %}
                                             </div>
                                         </div>
                                         {% comment %} <div class="col-lg-2">
@@ -274,8 +274,8 @@
                             <li><a href="components.html">Components</a></li>
                         </ul>
                     </li> {% endcomment %}
-                    <li class="has-submenu">
-                        <a href="#">Blog <i class="fas fa-chevron-down"></i></a>
+                    <li>
+                        <a href="{% url 'blog'  %}"">Blog <i></i></a>
                         <ul class="submenu">
                             <li><a href="{% url 'blog'  %}">Blog List</a></li>
                             {% comment %} <li><a href="blog-grid.html">Blog Grid</a></li>
